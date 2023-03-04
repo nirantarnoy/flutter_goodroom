@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wallet_ui/pages/mainpage.dart';
+import 'package:flutter_wallet_ui/pages/onboarding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Kanit-Regular',
       ),
-      home: MainPage(),
+      home: OnboardingPage(),
     );
   }
 }

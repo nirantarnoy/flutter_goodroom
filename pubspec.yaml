@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator:
   intl:
+  introduction_screen:
 
 dev_dependencies:
   flutter_test:
