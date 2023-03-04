@@ -19,8 +19,15 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.grey[300],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(Icons.monetization_on),
+        backgroundColor: Colors.blue[300],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(
+            'assets/icons/atm-card.png',
+            fit: BoxFit.fill,
+          ),
+        ),
+        // child: Icon(Icons.payments),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(

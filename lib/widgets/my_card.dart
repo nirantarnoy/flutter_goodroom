@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class MyCard extends StatelessWidget {
   final String title;
@@ -16,6 +17,7 @@ class MyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var formatter = NumberFormat('#,##,##0.0#');
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
@@ -42,14 +44,14 @@ class MyCard extends StatelessWidget {
             height: 10,
           ),
           Text(
-            '\$${balance}',
+            '${formatter.format(balance)}',
             style: TextStyle(
               color: Colors.white,
               fontSize: 28,
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
