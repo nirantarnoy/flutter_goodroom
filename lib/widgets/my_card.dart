@@ -33,7 +33,7 @@ class MyCard extends StatelessWidget {
             ]),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            '${title} Balance',
+            '${title}',
             style: TextStyle(
               color: Colors.white,
             ),
@@ -61,7 +61,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               Text(
-                '{$expired_date}',
+                '${expired_date}',
                 style: TextStyle(
                   color: Colors.white,
                 ),

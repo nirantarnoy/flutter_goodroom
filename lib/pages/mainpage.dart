@@ -32,15 +32,15 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {},
               icon: Icon(
                 Icons.home,
-                color: Colors.deepPurple[300],
+                color: Colors.blue[300],
                 size: 32,
               ),
             ),
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.settings,
-                color: Colors.deepPurple[300],
+                Icons.notifications,
+                color: Colors.blue[300],
                 size: 32,
               ),
             ),
@@ -68,7 +68,7 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                     Text(
-                      ' Wallets',
+                      ' Room',
                       style: TextStyle(fontSize: 28),
                     )
                   ],
@@ -92,17 +92,17 @@ class _MainPageState extends State<MainPage> {
               scrollDirection: Axis.horizontal,
               children: [
                 MyCard(
-                  title: 'Wallet',
-                  balance: 520.50,
-                  card_no: '1234567890',
-                  expired_date: '01/23',
+                  title: 'รอบการชำระปัจจุบัน',
+                  balance: 5020.50,
+                  card_no: 'โปรดชำระภายในวันที่',
+                  expired_date: '01/04/2023',
                   color: Colors.deepPurple[400],
                 ),
                 MyCard(
-                  title: 'Pont',
+                  title: 'รายการชำระล่าสุด',
                   balance: 690.89,
-                  card_no: '2345678901',
-                  expired_date: '01/27',
+                  card_no: 'ชำระวันที่',
+                  expired_date: '05/02/2023',
                   color: Colors.blue[400],
                 ),
                 // MyCard(
@@ -133,9 +133,10 @@ class _MainPageState extends State<MainPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              MyButton(imgbutton: 'send-money.png', textbutton: 'เติมวอลเล็ท'),
-              MyButton(imgbutton: 'atm-card.png', textbutton: 'ถอน Point'),
-              MyButton(imgbutton: 'invoice.png', textbutton: 'แจ้งรายการ'),
+              MyButton(imgbutton: 'send-money.png', textbutton: 'ชำระค่าห้อง'),
+              MyButton(imgbutton: 'invoice.png', textbutton: 'แจ้งชำระ'),
+              MyButton(
+                  imgbutton: 'problem-solved.png', textbutton: 'แจ้งปัญหา'),
             ],
           ),
           SizedBox(
@@ -152,188 +153,108 @@ class _MainPageState extends State<MainPage> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(12),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(12),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  height: 80,
+                                  child: Image.asset('assets/icons/growth.png'),
                                 ),
-                                height: 80,
-                                child: Image.asset('assets/icons/growth.png'),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Transaction History',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Transaction History',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'ประวัติการเติมวอลเล็ทและถอน',
-                                    style: TextStyle(
-                                      color: Colors.grey[700],
+                                    SizedBox(
+                                      height: 8,
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios),
-                        ],
+                                    Text(
+                                      'ประวัติการชำระค่าห้อง',
+                                      style: TextStyle(
+                                        color: Colors.grey[700],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(12),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(12),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  height: 80,
+                                  child: Image.asset('assets/icons/list.png'),
                                 ),
-                                height: 80,
-                                child: Image.asset('assets/icons/visa.png'),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Visa',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Payments invoices',
-                                    style: TextStyle(
-                                      color: Colors.grey[700],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(12),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(12),
+                                SizedBox(
+                                  width: 20,
                                 ),
-                                height: 80,
-                                child:
-                                    Image.asset('assets/icons/send-money.png'),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Backorders',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Problem information',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Payments invoices',
-                                    style: TextStyle(
-                                      color: Colors.grey[700],
+                                    SizedBox(
+                                      height: 8,
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(12),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(12),
+                                    Text(
+                                      'ประวัติการแจ้งปัญหา',
+                                      style: TextStyle(
+                                        color: Colors.grey[700],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                height: 80,
-                                child:
-                                    Image.asset('assets/icons/send-money.png'),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Backorders',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'Payments invoices',
-                                    style: TextStyle(
-                                      color: Colors.grey[700],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Icon(Icons.arrow_forward_ios),
-                        ],
+                              ],
+                            ),
+                            Icon(Icons.arrow_forward_ios),
+                          ],
+                        ),
                       ),
                     ),
                   ],
