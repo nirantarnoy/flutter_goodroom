@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wallet_ui/pages/loginpage.dart';
 import 'package:flutter_wallet_ui/pages/mainpage.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -42,7 +43,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       isProgressTap: false,
       showNextButton: false,
       onDone: () => Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => MainPage())),
+          .pushReplacement(MaterialPageRoute(builder: (_) => LoginPage())),
     ));
   }
 
