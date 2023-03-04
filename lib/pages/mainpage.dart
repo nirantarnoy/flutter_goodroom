@@ -19,7 +19,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.grey[300],
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.blue,
         child: Icon(Icons.monetization_on),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -32,7 +32,7 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {},
               icon: Icon(
                 Icons.home,
-                color: Colors.pink[300],
+                color: Colors.deepPurple[300],
                 size: 32,
               ),
             ),
@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {},
               icon: Icon(
                 Icons.settings,
-                color: Colors.pink[300],
+                color: Colors.deepPurple[300],
                 size: 32,
               ),
             ),
@@ -76,8 +76,8 @@ class _MainPageState extends State<MainPage> {
                 Container(
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
-                        color: Colors.grey[400], shape: BoxShape.circle),
-                    child: Icon(Icons.add)),
+                        color: Colors.grey[200], shape: BoxShape.circle),
+                    child: Icon(Icons.list)),
               ],
             ),
           ),
