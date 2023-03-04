@@ -90,7 +90,7 @@ class _MainPageState extends State<MainPage> {
           ),
           //cards
           SizedBox(
-            height: 25,
+            height: 20,
           ),
           Container(
             height: 200,

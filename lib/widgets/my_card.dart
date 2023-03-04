@@ -34,14 +34,41 @@ class MyCard extends StatelessWidget {
               ),
             ]),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
-            '${title}',
-            style: TextStyle(
-              color: Colors.white,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '${title}',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(8),
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'เลขห้อง ',
+                    ),
+                    Text(
+                      '505',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
           SizedBox(
-            height: 10,
+            height: 5,
           ),
           Text(
             '${formatter.format(balance)}',
