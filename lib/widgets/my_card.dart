@@ -17,7 +17,7 @@ class MyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var formatter = NumberFormat('#,##,##0.0#');
+    var formatter = NumberFormat('#,##,##0.##');
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
